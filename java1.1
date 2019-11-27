@@ -1,0 +1,47 @@
+package 练习3;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class LoginTestone extends JFrame{
+	JPanel pn1,pn2,pn3;
+	JButton bt1,bt2;
+	JLabel lb1,lb2;
+	JTextField nameTextField;
+	JPasswordField pwdPassPasswordFielb;
+	
+	public LoginTestone() {
+		super();
+		pn1 = new JPanel();
+		pn2 = new JPanel();
+		pn3 = new JPanel();
+		
+		lb1 = new JLabel("用户名");
+		lb2 = new JLabel("密    码");
+		
+		bt1 = new JButton("登录");
+		bt2 = new JButton("取消");
+		
+		nameTextField = new JTextField(10);
+		pwdPassPasswordFielb = new JPasswordField(10);
+		
+		this.setLayout(new GridLayout(3,1));
+		pn1.add(lb1); pn1.add(nameTextField);
+		pn2.add(lb2); pn2.add(pwdPassPasswordFielb);
+		pn3.add(bt1); pn3.add(bt2);
+		
+		this.add(pn1);
+		this.add(pn2);
+		this.add(pn3);
+		
+		this.setTitle("用户登录");
+		this.setSize(230, 150);
+		this.setLocation(300, 280);
+		this.setResizable(false);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+		LoginTestone w = new LoginTestone();
+	}
+}
